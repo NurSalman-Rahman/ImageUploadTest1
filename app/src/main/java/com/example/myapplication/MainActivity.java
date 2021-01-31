@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
     private ApiService api;//= retrofit.create(ApiService.class);
     private MultipartBody.Part part;
     private Bitmap bitmap = null;
-    RequestBody fileReqBody = null;
 
 
     @Override
@@ -74,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d("Testing", "onClick: 1");
                 if (part != null)
-                    uploadFile();
+                    call_api();
                 Log.d("Testing", "onClick: 2");
 
 
@@ -149,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
     //api
 
 
-    private void uploadFile() {
+    private void call_api() {
 
         //creating a file
         //  File file = new File(getRealPathFromURI(fileUri));
